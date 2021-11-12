@@ -1,0 +1,63 @@
+#ifndef __MY_DRIVER_DEFINE_20190923_FHQ_H__
+#define __MY_DRIVER_DEFINE_20190923_FHQ_H__
+
+#if defined(__cplusplus)
+extern "C" {     
+#endif
+
+
+//#define SUPPORT_MY_NG
+#define SUPPORT_MY_BLE
+//#define SUPPORT_MY_BUZZER
+//#define SUPPORT_MY_GPS
+#define SUPPORT_MY_GSENSOR
+//#define SUPPORT_MY_KEY
+//#define SUPPORT_MY_LED
+//#define SUPPORT_MY_WIFI
+#define SUPPORT_MY_TIMER
+//#define SUPPORT_MY_FILEIO
+//#define SUPPORT_MY_FILESYSTEM
+#define SUPPORT_MY_UART
+#define SUPPORT_MY_POWERMANAGER
+#define SUPPORT_MY_CLOCK
+#define SUPPORT_MY_MEMORY
+#define SUPPORT_MY_SYSTEM
+
+#define SUPPORT_MY_MESSAGE
+//#define SUPPORT_MY_VIBURATOR
+#define SUPPORT_MY_LOG
+//#define SUPPORT_MY_AT
+#define SUPPORT_MY_NVRAM
+
+#if defined(SUPPORT_PLATFORM_MTK)
+#define KEYEVENT_INT_MODE
+#define SUPPORT_WATCH_DOG
+#elif defined(SUPPORT_PLATFORM_NORDIC)
+#endif
+
+#ifdef SUPPORT_MY_BUZZER
+#define SUPPORT_MY_BUZZER_TIMER_MODE
+#endif
+#ifdef SUPPORT_MY_VIBURATOR
+#define SUPPORT_MY_VIBURATOR_TIMER_MODE
+#endif
+#ifdef SUPPORT_MY_LED
+#define SUPPORT_MY_LED_TIMER_MODE 
+#endif
+
+#ifdef SUPPORT_MY_GPS
+#define SUPPORT_MY_GPSEPO
+#if defined(SUPPORT_PLATFORM_MTK)
+//#define SUPPORT_LOAD_EPO_INTO_FLASH
+#endif
+#endif
+
+
+#if defined(__cplusplus)
+}
+#endif 
+
+#endif //__MY_DRIVER_DEFINE_20190923_FHQ_H__
+
+
+
